@@ -3,14 +3,14 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 
 
-addEmployeesBtn.addEventListener('click', function() {
-//     const userFirstName = prompt('add First Name');
-        // const firstName = prompt ("enter first name");
-        // const lastName = prompt ("enter last name");
-        // const salary = prompt ("enter salary");
-        // const number = parseInt(salary);
-        // console.log('does this work?')
-});
+// addEmployeesBtn.addEventListener('click', function() {
+// //     const userFirstName = prompt('add First Name');
+//         // const firstName = prompt ("enter first name");
+//         // const lastName = prompt ("enter last name");
+//         // const salary = prompt ("enter salary");
+//         // const number = parseInt(salary);
+//         // console.log('does this work?')
+// });
 
 // had some help condesing it (former structure on the bottom).
 const employees = [];
@@ -20,6 +20,10 @@ const collectEmployees = function() {
 
     while (addAnother) {
         const firstName = prompt("Enter first name");
+
+        if (firstName === null) {
+          break; 
+      }
         const lastName = prompt("Enter last name");
         let salary = prompt("Enter salary");
 
@@ -48,21 +52,18 @@ const collectEmployees = function() {
     return employees;
 };
 
-addEmployeesBtn.addEventListener('click', function() {
-    const employeeData = collectEmployees();
+// addEmployeesBtn.addEventListener('click', function() {
+//     const employeeData = collectEmployees();
     
-});
+// });
 
-
- 
 // TODO: Calculate and display the average salary
 const displayAverageSalary = function(employeesArray) {
-    const totalSalary = employeesArray.reduce((acc, salary) => acc + employees.salary, 0);
-    const averageSalary = totalSalary / employeesArray.length;
-    const numberOfEmployees = employeesArray.length;
-    // check to make sure the line below displays the average in the console log 
-    console.log(`the average of salary is: ${averageSalary}`)
- 
+  const totalSalary = employeesArray.reduce((acc, employee) => acc + employee.salary, 0);
+  const averageSalary = totalSalary / employeesArray.length;
+  const numberOfEmployees = employeesArray.length;
+  // check to make sure the line below displays the average in the console log 
+  console.log(`The average salary is: ${averageSalary}`);
 }
 //TODO: Select and display a random employee
 const getRandomEmployee = function(employeesArray) {
