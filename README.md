@@ -9,16 +9,16 @@ this a functioning [payroll tracker](https://ther16h.github.io/payroll-tracker-/
 
 - [Support](#support)
 - [Visuals](#visuals)
-- [Acknowledgements](#acknowledgements)
 - [Usage](#usage)
+- [Acknowledgements](#acknowledgements)
 - [License](#license)
 
 ## Support
 N/A
 
 ## Visuals
- [<img src=./asses">](link)
-[<img src="./Assets/Screenshot 2024-05-08 215545.png">](link)
+![Screenshot](./Assets/Updated1.png)
+
 
 ## Usage
 
